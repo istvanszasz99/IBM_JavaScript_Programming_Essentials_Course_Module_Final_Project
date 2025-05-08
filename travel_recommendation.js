@@ -1,6 +1,6 @@
 let travelData = {};
 
-fetch('../travel_recommendation_api.json')
+fetch('/IBM_JavaScript_Programming_Essentials_Course_Module_Final_Project/travel_recommendation_api.json')
     .then(response => response.json())
     .then(data => {
         travelData = data;

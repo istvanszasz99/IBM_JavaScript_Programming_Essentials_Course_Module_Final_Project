@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Travel Recommendation Website</title>
-    <link rel="stylesheet" href="../template/travel_recommendation.css">
+    <link rel="stylesheet" href="/IBM_JavaScript_Programming_Essentials_Course_Module_Final_Project/template/travel_recommendation.css">
 </head>
 <body>
     <div id="template"></div>
@@ -38,7 +38,7 @@
         </div>
     </div>
     <script>
-        fetch('../template/travel_recommendation.html')
+        fetch('/IBM_JavaScript_Programming_Essentials_Course_Module_Final_Project/template/travel_recommendation.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('template').innerHTML = data;
@@ -49,7 +49,7 @@
                 }
                 // Optionally, load your main JS here if needed
                 // const script = document.createElement('script');
-                // script.src = '../travel_recommendation.js';
+                // script.src = '/IBM_JavaScript_Programming_Essentials_Course_Module_Final_Project/travel_recommendation.js';
                 // document.body.appendChild(script);
             });
     </script>
