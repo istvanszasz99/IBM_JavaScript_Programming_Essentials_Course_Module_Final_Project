@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel Recommendation Website</title>
+    <link rel="stylesheet" href="../template/travel_recommendation.css">
+</head>
+<body>
+    <div id="template"></div>
+    <div class="main-title">
+        EXPLORE<br>
+        DREAM<br>
+        DESTINATION
+    </div>
+    <div class="intro">
+        <p>
+            It encourages exploration of unfamilier territories, emracing diverse cultures and landscapes, while pusuing the desired destination that captivates the heart and ignites a sense of wonder.
+        </p>
+    </div>
+    <button class="book-now-btn">Book Now</button>
+    <div id="results-container"></div>
+    <script>
+        fetch('../template/travel_recommendation.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('template').innerHTML = data;
+                // Now load the search logic after the template is injected
+                const script = document.createElement('script');
+                script.src = '../travel_recommendation.js';
+                document.body.appendChild(script);
+            });
+    </script>
+</body>
+</html>

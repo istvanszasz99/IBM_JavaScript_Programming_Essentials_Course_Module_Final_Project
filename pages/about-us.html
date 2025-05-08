@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel Recommendation Website</title>
+    <link rel="stylesheet" href="../template/travel_recommendation.css">
+</head>
+<body>
+    <div id="template"></div>
+    <div class="about_us-main-title">
+        ABOUT US
+    </div>
+    <div class="about_us-intro">
+        <p>
+            Welcome Our Company! We are a team of passsionate individuals dedicated to providing excellent services/products to our customers.
+            Our mission is to <b>provide the best experience</b> for the people traveling to different destinations around the world.<br>
+            Our values include integrity, innovation, and customer satisfaction, and teamwork. We beleive in <b>putting our customers first</b> and <b>woking together</b> to achieve our goals.<br>
+            Feel free to explore our website and learn more about whate we offer. 
+        </p>
+    </div>
+    <div class="team">
+        <div class="team-heading">Our<br> Team</div>
+        <div class="team-cards">
+            <div class="team-card">
+                <h6>John Doe</h6>
+                <p>John is responsible for...</p>
+                <button class="about_us-btn">CEO</button>
+            </div>
+            <div class="team-card">
+                <h6>Celina Thomas</h6>
+                <p>Celina Thomas is responsible for...</p>
+                <button class="about_us-btn">Team Lead</button>
+            </div>
+            <div class="team-card">
+                <h6>Mike Tysen</h6>
+                <p>Mike Tysen is responsible for...</p>
+                <button class="about_us-btn">Delivery Head</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        fetch('../template/travel_recommendation.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('template').innerHTML = data;
+                // Remove search bar after template is injected
+                const searchBar = document.querySelector('.search-bar');
+                if (searchBar) {
+                    searchBar.remove();
+                }
+                // Optionally, load your main JS here if needed
+                // const script = document.createElement('script');
+                // script.src = '../travel_recommendation.js';
+                // document.body.appendChild(script);
+            });
+    </script>
+</body>
+</html>
